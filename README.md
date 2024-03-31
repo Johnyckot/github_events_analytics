@@ -38,7 +38,7 @@ Each folder contains archived json files with raw data for a given day.
 Stage area is allocated in GCS bucket with the following folder structure:  
     _../entity_name/year=YYYY/month=MM/day=DD_
 
-Each folder contains parquet files for a given day. Data is derived from a corresponding raw-files of the same day.
+Each folder contains parquet files for a given day. Data is derived from corresponding raw-files of the same day.
 On top of each entity folder a partitioned BigQuery External table is created.
 
 ### Data Mart area
@@ -94,8 +94,8 @@ Fact tables are Partitioned by Event Day, so that only one partition should be r
   
 ### GCP resources deployment
  - Open _terraform_ folder of the project;
- - Adjust variables.tf accordingly;
- - Run Terraform Init,Apply. Followwing resources are created:
+ - Adjust variables.tf according to your project;
+ - Run Terraform Init, Apply. Followwing resources are created:
     1. GCS bucket;
     2. BigQUery dataset;
     3. DataProc Cluster (1 Driver + 2 Executors of _e2-standard-4_ VM);
